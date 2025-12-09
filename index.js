@@ -3,7 +3,12 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-    res.send('Node App is running!');
+    // דוגמה של רשימת שירותים
+    const services = [
+        { id: 1, name: 'Service A' },
+        { id: 2, name: 'Service B' }
+    ];
+    res.json(services);
 });
 
 app.listen(port, () => {
