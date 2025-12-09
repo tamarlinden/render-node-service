@@ -2,9 +2,8 @@ const axios = require('axios');
 const express = require('express');
 const app = express();
 const port = 3000;
-
-// כאן צריך להכניס את ה-API Key שלך מ-Render
-const RENDER_API_KEY = 'YOUR_API_KEY_HERE';
+require('dotenv').config(); 
+const RENDER_API_KEY = process.env.RENDER_API_KEY;
 
 app.get('/my-services', async (req, res) => {
     try {
